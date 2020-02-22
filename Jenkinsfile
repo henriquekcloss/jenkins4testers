@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image "ruby:alpine"
-            args "-u root --privileged --network=skynet"
+            args "--network=skynet -u root --privileged"
         }
     }
     stages {
